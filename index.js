@@ -3,7 +3,7 @@
 
 var fs = require('fs'), p = require('path'), m = require('merge')
 
-function c (u, dir, r) {
+function c (u, d, r) {
   if (!u) {
     throw new Error('Empty parameter (url)')
   }
