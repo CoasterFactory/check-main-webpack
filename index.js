@@ -1,35 +1,30 @@
-var fs = require('fs')
-var path = require('path')
 
-function checkMainWebpack (url, dir, recur) {
-  if (!url) {
+// index.js
+
+var fs = require('fs'), p = require('path'), m = require('merge')
+
+function c (u, dir, r) {
+  if (!u) {
     throw new Error('Empty parameter (url)')
   }
-
-  if (!dir) {
-    dir = '../'
+  if (!d) {
+    d = '../'
   }
-
-  if (!recur) {
-    recur = 0
+  if (!r) {
+    r = 0
   }
-
-  file = 'webpack.config'
-  ext = '.js'
-
-  if (recur > 3) {
-    throw new Error('No main webpack config detected! (url: '+url+')')
+  var f = 'webpack.config', e = '.js'
+  if (r > 3) {
+    throw new Error('No main webpack config detected! (url: '+u+')')
   }
-
-  recur += 1
-
-  var _path = path.resolve(url, dir, file+ext)
-
-  if (!fs.existsSync(_path)) {
-    return checkMainWebpack(url, '../'+dir, recur)
+  r += 1
+  var _p = p.resolve(u, d, f+e)
+  if (!fs.existsSync(_p)) {
+    return c(u, '../'+d, r)
   }
-
-  return dir+file
+  return d+f
 }
 
-module.exports = checkMainWebpack
+module.exports = {
+  c, p, m
+}
