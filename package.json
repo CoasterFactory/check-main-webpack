@@ -1,0 +1,6 @@
+{
+  "name": "check-main-webpack",
+  "description": "Checks a hierarchy for an existing webpack.config.js file",
+  "version": "1.0.0",
+  "author": "Vincent Wilkie <vwilkie@coasterfactory.com>"
+}
