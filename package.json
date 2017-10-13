@@ -1,6 +1,9 @@
 {
   "name": "check-main-webpack",
-  "description": "Checks a hierarchy for an existing webpack.config.js file",
+  "description": "Recursively checks the current directory and its ancestors for the first existing webpack.config.js file (max 3 recursions) and returns the file path",
   "version": "1.0.1",
-  "author": "Vincent Wilkie <vwilkie@coasterfactory.com>"
+  "author": "Vincent Wilkie <vwilkie@coasterfactory.com>",
+  "dependencies": {
+    "merge": "^1.2.0",
+  }
 }
