@@ -4,6 +4,6 @@
   "version": "1.0.1",
   "author": "Vincent Wilkie <vwilkie@coasterfactory.com>",
   "dependencies": {
-    "merge": "^1.2.0",
+    "merge": "^1.2.0"
   }
 }
